@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio: Contador descendente</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background-color: #f44336;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d32f2f;
+    }
+    #conteo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ejercicio: Contador descendente</h1>
+  <p>Contador = <span id="conteo">10</span></p>
+  <button id="btndisminuir">Disminuir</button>
+
+  <script>
+    let contador = 10;
+    let boton = document.getElementById("btndisminuir");
+    let numero = document.getElementById("conteo");
+
+    boton.addEventListener("click", function() {
+      if (contador > 0) {
+        contador--;
+        numero.textContent = contador;
+      } else {
+        alert("¡El contador ya llegó a 0!");
+      }
+    });
+  </script>
+
+</body>
+</html>

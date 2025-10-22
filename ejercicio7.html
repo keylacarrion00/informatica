@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicios con JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #btnsubir {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #btnsubir:hover {
+      background-color: #45a049;
+    }
+    #btnCambiarFondo {
+      background-color: #2196F3;
+      color: white;
+    }
+    #btnCambiarFondo:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ejemplo 1: Contador -->
+  <h1>Ejercicio: Contador ascendente</h1>
+  <p>Contador = <span id="conteo">0</span></p>
+  <button id="btnsubir">Subir</button>
+
+  <hr>
+
+  <!-- Ejemplo 2: Cambiar color de fondo -->
+  <h1>Ejercicio: Modificar fondo al presionar un botón</h1>
+  <button id="btnCambiarFondo">Cambiar Fondo</button>
+
+  <script>
+    // Ejemplo 1: Contador
+    let contador = 0;
+    let boton = document.getElementById("btnsubir");
+    let numero = document.getElementById("conteo");
+
+    boton.addEventListener("click", function() {
+      contador++;
+      numero.textContent = contador;
+    });
+
+    // Ejemplo 2: Cambiar color de fondo
+    const botonFondo = document.getElementById("btnCambiarFondo");
+    botonFondo.addEventListener("click", function() {
+      document.body.style.backgroundColor = "lightblue";
+    });
+  </script>
+
+</body>
+</html>
+
